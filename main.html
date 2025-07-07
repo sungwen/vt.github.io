@@ -10,6 +10,16 @@
     h1, h2, h3 { color: #b30000; }
     .section-title { border-left: 5px solid #b30000; padding-left: 10px; margin-top: 2rem; }
     .highlight { background-color: #fff3cd; padding: 10px; border-radius: 5px; }
+    .blink-link {
+      animation: blink-animation 1s steps(2, start) infinite;
+      text-decoration: none;
+    }
+    
+    @keyframes blink-animation {
+      0%   { opacity: 1; }
+      50%  { opacity: 0; }
+      100% { opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -89,7 +99,7 @@
     <li>📎 <strong>準備資料</strong>：身份證影本、最高學歷影本</li>
   </ul>
   <p>
-    👉 <a href="https://its.taiwanjobs.gov.tw/Course/Detail?ID=156244">立即線上報名</a><br>
+    👉 <a href="#" class="blink-link fw-bold fs-4 text-danger">立即線上報名</a>
     👉 <a href="https://drive.google.com/file/d/1gG8iJFyNO_NMtOg9hYWczzDiVMBS2F69/view?usp=sharing">查看課程說明影片</a>
   </p>
 
