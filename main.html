@@ -15,22 +15,26 @@
       text-decoration: none;
     } */
     
-    /* 🌆 背景圖片淡化處理 */
-    body {
-      background-image: url('background.png'); /* 請放在與本檔案同資料夾，或更換路徑 */
+    /* ✅ 背景圖：淡化、固定、置底 */
+    .bg-image {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: url('background.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-color: #f8f9fa;
+      filter: brightness(0.6); /* 調整為 0.5～0.7 可淡化 */
     }
 
-    /* 📄 半透明白色遮罩區塊 */
+    /* ✅ 主內容區：白色底，遮罩清晰可讀 */
     .bg-overlay {
-      background-color: rgba(255, 255, 255, 0.85); /* 白色，85% 不透明 */
+      background-color: rgba(255, 255, 255, 0.95);
       padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       margin-top: 2rem;
       margin-bottom: 2rem;
     }
