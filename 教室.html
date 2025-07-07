@@ -10,42 +10,58 @@
       background-color: #f8f9fa;
       font-family: "Microsoft JhengHei", sans-serif;
     }
+
     .classroom-img {
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       transition: transform 0.3s;
     }
+
     .classroom-img:hover {
       transform: scale(1.03);
     }
+
+    /* 可選：加入淡化背景圖（視需要啟用） */
+    /*
+    body::before {
+      content: "";
+      background-image: url('background-light.jpg'); 
+      background-size: cover;
+      background-position: center;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      opacity: 0.08;
+      z-index: -1;
+    }
+    */
   </style>
 </head>
 <body>
 
 <div class="container py-4">
   <h2 class="text-center mb-4">🏫 上課教學環境導覽</h2>
-  <p class="text-center text-muted">實體教室環境寬敞明亮，配備專業電腦與3D列印機</p>
+  <p class="text-center text-muted">實體教室環境寬敞明亮，配備專業電腦與 3D 列印機</p>
 
   <!-- 教室圖片區塊 -->
   <div class="row row-cols-1 row-cols-md-2 g-4">
     <div class="col text-center">
-      <img src="class/classroom1.jpg" alt="教室環境1" class="img-fluid classroom-img">
+      <img src="class/classroom1.jpg" alt="教室環境 1" class="img-fluid classroom-img" loading="lazy">
     </div>
     <div class="col text-center">
-      <img src="class/classroom2.jpg" alt="教室環境2" class="img-fluid classroom-img">
+      <img src="class/classroom2.jpg" alt="教室環境 2" class="img-fluid classroom-img" loading="lazy">
     </div>
-    <!-- 若有更多圖片可持續新增 -->
     <div class="col text-center">
-      <img src="class/classroom3.jpg" alt="教室環境3" class="img-fluid classroom-img">
+      <img src="class/classroom3.jpg" alt="教室環境 3" class="img-fluid classroom-img" loading="lazy">
     </div>
-        <div class="col text-center">
-      <img src="class/classroom4.jpg" alt="教室環境3" class="img-fluid classroom-img">
+    <div class="col text-center">
+      <img src="class/classroom4.jpg" alt="教室環境 4" class="img-fluid classroom-img" loading="lazy">
     </div>
-        <div class="col text-center">
-      <img src="class/classroom5.jpg" alt="教室環境3" class="img-fluid classroom-img">
+    <div class="col text-center">
+      <img src="class/classroom5.jpg" alt="教室環境 5" class="img-fluid classroom-img" loading="lazy">
     </div>
-        <div class="col text-center">
-      <img src="class/classroom6.jpg" alt="教室環境3" class="img-fluid classroom-img">
+    <div class="col text-center">
+      <img src="class/classroom6.jpg" alt="教室環境 6" class="img-fluid classroom-img" loading="lazy">
     </div>
   </div>
 
