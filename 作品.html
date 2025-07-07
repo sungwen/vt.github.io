@@ -1,43 +1,86 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>學員作品展示</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>學員作品分類展示</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body {
-      background-color: #f9f9f9;
-      font-family: "Microsoft JhengHei", sans-serif;
+    body { background-color: #f9f9f9; font-family: "Microsoft JhengHei", sans-serif; }
+    .category-title {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      border-left: 6px solid #0d6efd;
+      padding-left: 10px;
+      font-weight: bold;
+      color: #0d6efd;
     }
     .gallery-img {
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: 0.3s;
     }
     .gallery-img:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
   </style>
 </head>
 <body>
 
 <div class="container py-4">
-  <h2 class="text-center mb-4">🎨 學員作品展示</h2>
-  <p class="text-center text-muted">以下為歷屆學員精彩的3D建模與列印成果</p>
+  <h2 class="text-center mb-4">🎨 歷屆學員作品展示</h2>
 
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-    <div class="col"><img src="作品1.jpg" class="img-fluid gallery-img" alt="作品1"></div>
-    <div class="col"><img src="作品2.jpg" class="img-fluid gallery-img" alt="作品2"></div>
-    <div class="col"><img src="作品3.jpg" class="img-fluid gallery-img" alt="作品3"></div>
-    <div class="col"><img src="作品4.jpg" class="img-fluid gallery-img" alt="作品4"></div>
-    <div class="col"><img src="作品5.jpg" class="img-fluid gallery-img" alt="作品5"></div>
-    <div class="col"><img src="作品6.jpg" class="img-fluid gallery-img" alt="作品6"></div>
+  <!-- 分類一：公仔類 -->
+  <div class="category-title">1. 公仔類</div>
+  <div class="row row-cols-2 row-cols-md-4 g-4">
+    <div class="col"><img src="images/figure1.jpg" class="img-fluid gallery-img" alt="公仔1"></div>
+    <div class="col"><img src="images/figure2.jpg" class="img-fluid gallery-img" alt="公仔2"></div>
+    <div class="col"><img src="images/astro.jpg" class="img-fluid gallery-img" alt="原子小金剛"></div>
+    <div class="col"><img src="images/barbie.jpg" class="img-fluid gallery-img" alt="芭比娃娃"></div>
   </div>
 
-  <div class="text-center mt-4">
-    <a href="main.html" class="btn btn-secondary me-2">🏠 回到首頁</a>
+  <!-- 分類二：家電類 -->
+  <div class="category-title">2. 家電類</div>
+  <div class="row row-cols-2 row-cols-md-4 g-4">
+    <div class="col"><img src="images/hairdryer.jpg" class="img-fluid gallery-img" alt="吹風機"></div>
+    <div class="col"><img src="images/vacuum.jpg" class="img-fluid gallery-img" alt="吸塵器"></div>
+    <div class="col"><img src="images/joystick.jpg" class="img-fluid gallery-img" alt="控制器"></div>
+  </div>
+
+  <!-- 分類三：鋼彈 / 機器人 -->
+  <div class="category-title">3. 鋼彈 / 機器人</div>
+  <div class="row row-cols-2 row-cols-md-4 g-4">
+    <div class="col"><img src="images/gundam1.jpg" class="img-fluid gallery-img" alt="鋼彈1"></div>
+    <div class="col"><img src="images/gundam2.jpg" class="img-fluid gallery-img" alt="鋼彈2"></div>
+    <div class="col"><img src="images/robot1.jpg" class="img-fluid gallery-img" alt="R2D2"></div>
+  </div>
+
+  <!-- 分類四：寶可夢 -->
+  <div class="category-title">4. 寶可夢 / 動物角色</div>
+  <div class="row row-cols-2 row-cols-md-4 g-4">
+    <div class="col"><img src="images/pokemon1.jpg" class="img-fluid gallery-img" alt="寶可夢1"></div>
+    <div class="col"><img src="images/pokemon2.jpg" class="img-fluid gallery-img" alt="寶可夢2"></div>
+    <div class="col"><img src="images/scene1.jpg" class="img-fluid gallery-img" alt="Keroro 場景"></div>
+  </div>
+
+  <!-- 分類五：藝術品 -->
+  <div class="category-title">5. 藝術品</div>
+  <div class="row row-cols-2 row-cols-md-4 g-4">
+    <div class="col"><img src="images/art1.jpg" class="img-fluid gallery-img" alt="草間彌生風格"></div>
+    <div class="col"><img src="images/art2.jpg" class="img-fluid gallery-img" alt="花卉設計"></div>
+  </div>
+
+  <!-- 分類六：學生原創作品 -->
+  <div class="category-title">6. 學生原創作品</div>
+  <div class="row row-cols-2 row-cols-md-4 g-4">
+    <div class="col"><img src="images/student1.jpg" class="img-fluid gallery-img" alt="學生作品1"></div>
+    <div class="col"><img src="images/student2.jpg" class="img-fluid gallery-img" alt="學生作品2"></div>
+    <div class="col"><img src="images/student3.jpg" class="img-fluid gallery-img" alt="學生作品3"></div>
+  </div>
+
+  <!-- 返回 -->
+  <div class="text-center mt-5">
+    <a href="main.html" class="btn btn-secondary me-2">🏠 回首頁</a>
     <button onclick="history.back()" class="btn btn-outline-dark">🔙 返回上一頁</button>
   </div>
 </div>
