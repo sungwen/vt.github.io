@@ -85,6 +85,17 @@
       transform: scale(1.05);
     }
 
+    /* 新增：倒數計時器樣式 */
+    #countdown-timer {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #006400; /* 深綠色，與標題呼應 */
+        background-color: #f8f9fa;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid #dee2e6;
+    }
+
   </style>
 </head>
 <body>
@@ -95,7 +106,10 @@
     <h1 class="text-center mb-4" style="color: #003366;">📦 3D立體設計與列印班第01期</h1>
     <h1 class="text-center mb-4" style="color: #006400;">（五股職業訓練場）</h1>
 
-    <p class="text-center fs-4 fw-bold text-warning bg-dark d-inline-block px-3 py-1 rounded">🔥 即日起開放報名，名額有限！</p>
+    <div class="text-center">
+        <p class="fs-4 fw-bold text-warning bg-dark d-inline-block px-3 py-1 rounded">🔥 即日起開放報名，名額有限！</p>
+        <p class="mt-2"><span id="countdown-timer"></span></p>
+    </div>
     
     <p class="text-center mt-3">由 <strong>勞動部勞動力發展署 北基宜花金馬分署</strong> 主辦，<span class="text-danger fw-bold">全面政府補助，免學費</span></p>
     <p class="text-center">在訓期間輔導報考勞動部技術士證照及國際證照！</p>
@@ -193,7 +207,7 @@
           <a href="作品-4.html" class="gallery-item"><img src="preview_image_4.jpg" alt="學員作品4"></a>
       </div>
       <p class="mt-3">
-        🔍 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">點我查看學員作品動畫</a>
+        🔍 <a href="http://googleusercontent.com/youtube.com/7" target="_blank">點我查看學員作品動畫</a>
       </p>
     </div>
 
@@ -237,7 +251,7 @@
         <p class="mt-1">🏫 點我查看教學環境</p>
       </a>
       <p class="mt-3">
-        🗺 <a href="https://maps.app.goo.gl/your_real_map_id" target="_blank">點此開啟 Google Maps 導航</a>
+        🗺 <a href="http://googleusercontent.com/maps.google.com/8" target="_blank">點此開啟 Google Maps 導航</a>
       </p>
     </div>
 
@@ -248,5 +262,38 @@
     <div class="mt-5 text-center text-muted">資料來源：五股職業訓練場招生簡章</div>
   </div>
 </div>
+
+<script>
+// 設定目標日期 (民國114年10月1日)
+// 在 JavaScript 中，月份是從 0 開始的，所以 10 月要用 9
+const countDownDate = new Date("2025-10-01T23:59:59").getTime();
+
+// 每秒更新一次計時器
+const x = setInterval(function() {
+
+  // 獲取當前時間
+  const now = new Date().getTime();
+    
+  // 計算剩餘時間
+  const distance = countDownDate - now;
+    
+  // 計算天、小時、分鐘和秒
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // 在 ID 為 "countdown-timer" 的元素中顯示結果
+  document.getElementById("countdown-timer").innerHTML = "距離報名截止還有： " + days + "天 " + hours + "時 "
+  + minutes + "分 " + seconds + "秒 ";
+    
+  // 如果倒數結束，顯示提示文字
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown-timer").innerHTML = "報名已截止";
+  }
+}, 1000);
+</script>
+
 </body>
 </html>
