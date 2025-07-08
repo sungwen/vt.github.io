@@ -58,6 +58,18 @@
       50%  { opacity: 0; }
       100% { opacity: 1; }
     }
+
+    /* 新增：倒數計時器樣式 */
+    #countdown-timer {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #006400; /* 深綠色，與標題呼應 */
+        background-color: #f8f9fa;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid #dee2e6;
+    }
+    
   </style>
 </head>
 <body>
@@ -67,7 +79,10 @@
   <strong><h1 class="text-center mb-4" style="color: #003366;">📦 3D立體設計與列印班第01期</h1>
   <h1 class="text-center mb-4" style="color: #006400;">（五股職業訓練場）</h1></strong>
 
-  <p class="text-center fs-4 fw-bold text-warning bg-dark d-inline-block px-3 py-1 rounded">🔥 即日起開放報名，名額有限！</p>
+  <div class="text-center">
+      <p class="fs-4 fw-bold text-warning bg-dark d-inline-block px-3 py-1 rounded">🔥 即日起開放報名，名額有限！</p>
+      <p class="mt-2"><span id="countdown-timer"></span></p>
+  </div>
 
   <p class="text-center">由 <strong>勞動部勞動力發展署 北基宜花金馬分署</strong> 主辦，<span class="text-danger fw-bold">全面政府補助，免學費</span></p>
   <p class="text-center">在訓期間輔導報考勞動部技術士證照及國際證照！</p>
