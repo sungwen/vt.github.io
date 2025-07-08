@@ -188,5 +188,45 @@
 <div class="mt-5 text-center text-muted">資料來源：五股職業訓練場招生簡章</div>
 </div>
 
+<script>
+// 使用 DOMContentLoaded 事件監聽器，確保頁面完全載入後才執行腳本
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // 設定目標日期：西元 2025年 10月 1日 23:59:59
+  const countDownDate = new Date("2025-10-01T23:59:59").getTime();
+
+  // 找到要顯示計時器的元素
+  const timerElement = document.getElementById("countdown-timer");
+
+  // 每秒更新一次計時器
+  const countdownInterval = setInterval(function() {
+
+    // 獲取當前時間
+    const now = new Date().getTime();
+      
+    // 計算剩餘時間
+    const distance = countDownDate - now;
+      
+    // 如果倒數已經結束
+    if (distance < 0) {
+      clearInterval(countdownInterval);
+      timerElement.innerHTML = "報名已截止";
+      return; // 結束函式執行
+    }
+
+    // 計算天、小時、分鐘和秒
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+    // 在指定的元素中顯示結果
+    timerElement.innerHTML = "距離報名截止還有： " + days + "天 " + hours + "時 "
+    + minutes + "分 " + seconds + "秒 ";
+
+  }, 1000);
+});
+</script>
+  
 </body>
 </html>
